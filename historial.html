@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>UniConecta | Historial</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body data-page="historial">
+        <header class="topbar">
+            <a class="brand" href="muro.html">✦ UniConecta</a>
+            <nav>
+                <a href="muro.html">Inicio</a>
+                <a href="historial.html" class="current">Mi historial</a>
+                <button class="navbutton" id="cerrarSesion">Salir</button>
+            </nav>
+        </header>
+        <main class="history-wrap">
+            <div class="pageheading">
+                <div>
+                    <span class="eyebrow">TU ACTIVIDAD</span>
+                    <h1>Historial de interacciones</h1>
+                    <p>Consulta tus publicaciones, reacciones y comentarios, del más reciente al más antiguo.</p>
+                </div>
+                <button id="descargarHistorial" class="btn primary">Descargar historial (.txt)</button>
+            </div>
+            <div class="stats">
+                <div class="panel">
+                    <b id="totalPosts">0</b>
+                    <span>Publicaciones actuales</span>
+                </div><div class="panel">
+                    <b id="totalLikes">0</b>
+                    <span>Me gusta activos</span>
+                </div>
+                <div class="panel">
+                    <b id="totalComentarios">0</b>
+                    <span>Comentarios realizados</span>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Mis actividades registradas</h2>
+                <div id="listaHistorial"></div>
+                    
+            </div>
+        </main>
+        <footer>UniConecta · Proyecto académico</footer>
+        <script src="js/main.js" defer></script>
+    </body>
+</html>

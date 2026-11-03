@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>UniConecta | Muro</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body data-page="muro">
+        <header class="topbar">
+            <a class="brand" href="muro.html">✦ UniConecta</a>
+            <nav>
+                <a class="current" href="muro.html">Inicio</a>
+                <a href="historial.html">Mi historial</a>
+                <button id="cerrarSesion" class="navbutton">Salir</button>
+            </nav>
+        </header>
+        <main class="app-layout">
+            <aside class="sidebar">
+                <div class="panel">
+                    <div class="avatar" id="avatar">U</div>
+                    <h2 id="perfilNombre">Estudiante</h2>
+                    <p class="muted" id="perfilUsuario"></p>
+                    <p id="perfilBio"></p>
+                    <span class="chip" id="perfilCarrera"></span>
+                </div>
+                <div class="panel small">
+                    <strong>¿Qué puedes hacer?</strong>
+                    <p>Compartir información académica, preguntar, comentar y reaccionar.</p>
+                </div>
+            </aside>
+            <section class="feed">
+                <div class="panel">
+                    <h2>Crear publicación</h2>
+                    <form id="publicacionForm" class="form">
+                        <label>Tipo de publicación
+                            <select id="tipoPost">
+                                <option>Información</option>
+                                <option>Duda</option>
+                                <option>Apunte</option>
+                            </select>
+                        </label>
+                        <label>Comunidad o carrera
+                            <select id="grupoPost">
+                                <option>General</option>
+                                <option>Ingeniería en Sistemas</option>
+                                <option>Administración</option>
+                                <option>Derecho</option>
+                                <option>Medicina</option>
+                                <option>Otra carrera</option>
+                            </select>
+                        </label>
+                        <label>¿Qué deseas compartir?
+                            <textarea id="textoPost" required minlength="3" maxlength="700" rows="4" placeholder="Escribe una pregunta o comparte algo útil para otros estudiantes..."></textarea>
+                        </label><button class="btn primary" type="submit">Publicar ahora</button>
+                    </form>
+                </div><div class="feedhead">
+                    <h2>Publicaciones recientes</h2>
+                    <select id="filtroGrupo" aria-label="Filtrar publicaciones por comunidad">
+                        <option value="Todos">Todas las comunidades</option>
+                        <option>General</option>
+                        <option>Ingeniería en Sistemas</option>
+                        <option>Administración</option>
+                        <option>Derecho</option>
+                        <option>Medicina</option>
+                        <option>Otra carrera</option>
+                    </select>
+                </div>
+                <p class="message" id="muroMensaje" role="status"></p>
+                <div id="listaPublicaciones"></div>
+            </section>
+        </main>
+        <footer>UniConecta · Aprender es mejor en comunidad</footer>
+        <script src="js/main.js" defer></script>
+    </body>
+</html>
